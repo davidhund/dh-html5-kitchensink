@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="no-js CHECKIT--->is-debugging">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HTML5 Kitchensink</title>
+        <meta name="description" content="An overview of all HTML(5) elements, useful for e.g. a Styleguide">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <!-- Some(!) styling & layout through dh-kickstart. E.g. the Grid: -->
+        <div class="grid">
+            <div class="grid__unit l-secondary">
+                <ul class="linklist">
+                    <li><a href="#sections">Sections</a></li>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#grouping">Grouping content</a></li>
+                    <li><a href="#text">Text level elements</a></li>
+                    <li><a href="#edits">Edit elements</a></li>
+                    <li><a href="#embedded">Embedded elements</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#interactive">Interactive elements</a></li>
+                </ul>
+            </div>
+            <div class="grid__unit l-primary">
+                <h1>HTML(5) Kitchensink</h1>
+                <p>I needed a collection of all (visible) HTML(5) elements, grouped together roughly around the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/">Spec grouping</a>. It might be handy for e.g. a HTML/CSS Styleguide. I only applied some very basic styling. Use '<kbd>Inspect&nbsp;Element</kbd>' or <kbd>&nbsp;&#x2318;&nbsp;+&nbsp;U&nbsp;</kbd> and try adding a <code>is-debugging</code> class on <code>&lt;HTML&gt;</code> :)</p>
+                <p>Anyway: hopefully this can be of some value&hellip; <a href="https://github.com/davidhund">David Hund</a></p>
+            
+                <!-- #sections -->
+                <details class="section" id="sections">
+                    <summary class="section-hd">Sections<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/section.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <article><code>&lt;ARTICLE/&gt;</code>: A complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication.</article>
+                    <section><code>&lt;SECTION/&gt;</code>: A generic section of a document or application.</section>
+                    <nav><code>&lt;NAV/&gt;</code>: A section of a page that links to other pages or to parts within the page: a section with navigation links.</nav>
+                    <aside><code>&lt;ASIDE/&gt;</code>: A section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content.</aside>
+                    <header><code>&lt;HEADER/&gt;</code>: A group of introductory or navigational aids.</header>
+                    <footer><code>&lt;FOOTER/&gt;</code>: A footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.</footer>
+                    <address><code>&lt;ADDRESS/&gt;</code>: The contact information for its nearest article or body element ancestor.</address>
+                </details><!-- / #section.section -->
+
+                <!-- #headings -->
+                <details class="section" id="headings">
+                    <summary class="section-hd">Headings<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/#auto-toc-4" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <h1>First level heading  <code>&lt;H1/&gt;</code></h1>
+                    <h2>Second level heading <code>&lt;H2/&gt;</code></h2>
+                    <h3>Third level heading  <code>&lt;H3/&gt;</code></h3>
+                    <h4>Fourth level heading <code>&lt;H4/&gt;</code></h4>
+                    <h5>Fifth level heading  <code>&lt;H5/&gt;</code></h5>
+                    <h6>Sixth level heading  <code>&lt;H6/&gt;</code></h6>
+                </details><!-- / #headings.section -->
+
+                <!-- #grouping -->
+                <details class="section" id="grouping">
+                    <summary class="section-hd">Grouping content<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/grouping-content.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <p><code>&lt;P/&gt;</code>: Paragraph element (with a <code>&lt;HR/&gt;</code> below...)</p>
+
+                    <hr>
+
+                    <pre>
+            &lt;PRE/&gt;:Preformatted text element
+            &lt;div&gt;
+                &lt;p&gt;trolololo&lt;/p&gt;
+            &lt;/div&gt;
+                    </pre>
+
+                    <blockquote><code>&lt;BLOCKQUOTE/&gt;</code>: Blockquote element</blockquote>
+
+                    <ol>
+                        <li><code>&lt;OL/&gt;</code> Ordered list item</li>
+                        <li>Another list item</li>
+                        <li>
+                            <ul>
+                                <li>A nested list item</li>
+                                <li>Another nested list item</li>
+                            </ul>
+                        </li>
+                        <li>Another list item</li>
+                        <li>
+                            <ul>
+                                <li>A nested <em>unordered</em> list item</li>
+                                <li>Another nested list item</li>
+                            </ul>
+                        </li>
+                        <li>Another list item</li>
+                    </ol>
+
+                    <ul>
+                        <li><code>&lt;UL/&gt;</code> Unordered list item</li>
+                        <li>Another list item</li>
+                        <li>
+                            <ul>
+                                <li>A nested list item</li>
+                                <li>Another nested list item</li>
+                            </ul>
+                        </li>
+                        <li>Another list item</li>
+                        <li>
+                            <ol>
+                                <li>A nested <em>ordered</em> list item</li>
+                                <li>Another nested list item</li>
+                            </ol>
+                        </li>
+                        <li>Another list item</li>
+                    </ul>
+
+                    <dl>
+                        <dt><code>&lt;DT/&gt;</code> Definition title in a <code>&lt;DL/&gt;</code> definition list</dt>
+                        <dd><code>&lt;DD/&gt;</code> Definition content ('definition')'</dd>
+                        <dt>Another <code>&lt;DT/&gt;</code> title</dt>
+                        <dd>
+                            <p>Paragraph and unordered list in a <code>&lt;DD/&gt;</code></p>
+                            <ul>
+                                <li><code>&lt;LI/&gt;</code>List item</li>
+                                <li><code>&lt;LI/&gt;</code>List item</li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <figure>
+                        <img src="http://placehold.it/1200x240&amp;text=1200px+%3cIMG%3e+in+%3cFIGURE%3e" alt="The &lt;FIGURE/&gt; element">
+                        <figcaption>&lt;FIGCAPTION/&gt; in a &lt;FIGURE/&gt;: Some flow content, optionally with a caption, that is self-contained (like a complete sentence) and is typically referenced as a single unit from the main flow of the document.</figcaption>
+                    </figure>
+
+                    <main><code>&lt;MAIN/&gt;</code>: A container for the dominant contents of another element.</main>
+
+                    <div><code>&lt;DIV/&gt;</code>: The div element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.</div>
+
+                </details><!-- / #grouping.section -->
+
+                <!-- #text -->
+                <details class="section" id="text">
+                    <summary class="section-hd">Text level elements<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <a href="#" title="The A element"><code>&lt;A/&gt;</code> Hyperlink</a><br>
+                    <em><code>&lt;EM/&gt;</code> Stress emphasis</em><br>
+                    <strong><code>&lt;STRONG/&gt;</code> Strong importance, seriousness, or urgency</strong><br>
+                    <small><code>&lt;SMALL/&gt;</code> side comments such as small print</small><br>
+                    <s><code>&lt;S/&gt;</code> contents that are no longer accurate or no longer relevant</s><br>
+                    <cite><code>&lt;CITE/&gt;</code> The title of a work (e.g. a book, a paper, an essay, a poem, a score, a song, a script, a film, a TV show, a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an exhibition, a legal case report, a computer program, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing</cite><br>
+                    <q cite="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-q-element"><code>&lt;Q/&gt;</code> Some phrasing content quoted from another source.</q><br>
+                    <dfn title="Example"><code>&lt;DFN/&gt;</code> The defining instance of a term.</dfn><br>
+                    <abbr title="Web Hypertext Application Technology Working Group"><code>&lt;ABBR/&gt;</code> An abbreviation or acronym, optionally with its expansion.</abbr><br>
+                    <data value="1"><code>&lt;DATA/&gt;</code> Represents its contents, along with a machine-readable form of those contents in the value attribute.</data><br>
+                    <time datetime="2014-03-27"><code>&lt;TIME/&gt;</code> Represents its contents, along with a machine-readable form of those contents in the datetime attribute.</time><br>
+                    <code><code>&lt;CODE/&gt;</code> A fragment of computer code.</code><br>
+                    <var><code>&lt;VAR/&gt;</code> Represents a variable</var><br>
+                    <samp><code>&lt;SAMP/&gt;</code> Represents sample or quoted output from another program or computing system.</samp><br>
+                    <kbd><code>&lt;KBD/&gt;</code> Represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).</kbd><br>
+                    <sub><code>&lt;SUB/&gt;</code> Subscript</sub> and <sup><code>&lt;sup/&gt;</code> superscript</sup><br>
+                    <i><code>&lt;I/&gt;</code> A span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic phrase from another language, transliteration, a thought, or a ship name in Western texts.</i><br>
+                    <b><code>&lt;B/&gt;</code> A span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede.</b><br>
+                    <u><code>&lt;U/&gt;</code> A span of text with an unarticulated, though explicitly rendered, non-textual annotation, such as labeling the text as being a proper name in Chinese text (a Chinese proper name mark), or labeling the text as being misspelt.</u><br>
+                    <ruby><code>&lt;RUBY/&gt;</code> Allows one or more spans of phrasing content to be marked with ruby annotations. <rp>(</rp><rt><code>&lt;RT/&gt;</code> Ruby text component of a ruby annotation</rt><rp>)</rp></ruby><br>
+                    <bdi><code>&lt;BDI/&gt;</code> A span of text that is to be isolated from its surroundings for the purposes of bidirectional text formatting</bdi><br>
+                    <bdo dir="ltr"><code>&lt;BDO/&gt;</code> Represents explicit text directionality formatting control for its children. It allows authors to override the Unicode bidirectional algorithm by explicitly specifying a direction override.</bdo><br>
+                    <span>The <code>&lt;SPAN/&gt;</code> element doesn't mean anything on its own, but can be useful when used together with the global attributes, e.g. class, lang, or dir.</span><br>
+                    <code>&lt;BR/&gt; (linebreak)</code><br>
+                    <code>&lt;WBR/&gt; (line break opportunity)</code>:<wbr>
+                </details><!-- / #text.section -->
+
+                <!-- #edits -->
+                <details class="section" id="edits">
+                    <summary class="section-hd">Edit elements<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/edits.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <ins><code>&lt;INS/&gt;</code> Represents an addition to the document.</ins><br>
+                    <del><code>&lt;DEL/&gt;</code> Represents a removal from the document.</del><br>
+                    <mark><code>&lt;MARK/&gt;</code> Run of text in one document marked or highlighted for reference purposes, due to its relevance in another context.</mark><br>
+                </details><!-- / #edits.section -->
+
+                <!-- #embedded -->
+                <details class="section" id="embedded">
+                    <summary class="section-hd">Embedded content<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/embedded-content.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <div class="contain">
+                        <code>&lt;IMG/&gt;</code>
+                        <img src="http://placehold.it/1200x240&amp;text%3d1200px+%3cIMG%3e" alt="The &lt;IMG/&gt; element">
+                    </div>
+
+                    <div class="contain">
+                        <code>&lt;CANVAS/&gt;</code>
+                        <canvas id="canvas" height="150">
+                            <p>Unsupported <code>&lt;CANVAS/&gt;</code></p>
+                        </canvas>
+                        <script>
+                        var ctx = document.getElementById("canvas").getContext("2d");
+                        ctx.fillStyle = "rgb(200,0,0)";
+                        ctx.fillRect(20, 20, 65, 60);
+                        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+                        ctx.fillRect (30, 30, 55, 50);
+                        </script>
+                    </div>
+
+                    <div class="contain">
+                        <code>&lt;IFRAME/&gt;</code>
+                        <!-- Note: we've given the iFrame a width -->
+                        <iframe width="600" src="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html"><code>&lt;IFRAME/&gt;</code> Represents a removal from the document.</iframe>
+                    </div>
+
+                    <div class="contain">
+                        <code>&lt;EMBED/&gt;</code>
+                        <embed src="http://technoargia.free.fr/swftools/examples/flash_eyes/flash_eyes.swf">
+                    </div>
+
+                    <div class="contain">
+                        <code>&lt;OBJECT/&gt;</code>
+                        <object data="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html">
+                            <p>Unsupported <code>&lt;OBJECT/&gt;</code></p>
+                        </object>
+                    </div>
+
+                    <div class="contain">
+                        <!-- [VIDEO] for everybody: http://camendesign.com/code/video_for_everybody -->
+                        <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
+                        <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
+                        <video width="640" height="360" controls>
+                            <!-- MP4 must be first for iPad! -->
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" ><!-- Safari / iOS video    -->
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" ><!-- Firefox / Opera / Chrome10 -->
+                            <!-- fallback to Flash: -->
+                            <object width="640" height="360" type="application/x-shockwave-flash" data="view-source:http://camendesign.com/code/video_for_everybody/player.swf">
+                                <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+                                <param name="movie" value="view-source:http://camendesign.com/code/video_for_everybody/player.swf" >
+                                <param name="flashvars" value="controlbar=over&amp;image=http://camendesign.com/code/video_for_everybody/poster.jpg&amp;file=__VIDEO__.MP4" >
+                                <!-- fallback image. note the title field below, put the title of the video there -->
+                                <img src="http://camendesign.com/code/video_for_everybody/poster.jpg" width="640" height="360" alt="__TITLE__"
+                                     title="No video playback capabilities, please download the video below" >
+                            </object>
+                        </video>
+                    </div>
+
+                    <div class="contain">
+                        <audio src="#music-src" controls>
+                            <a href="#music-src">Download song</a>
+                        </audio>
+                    </div>
+
+                    <div class="contain">
+                         <code>&lt;MAP/&gt;</code> imagemap:
+                         <img src="http://images.whatwg.org/sample-usemap.png" usemap="#shapes"
+                              alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+                         <map name="shapes">
+                          <area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+                          <area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
+                          <area shape=circle coords="200,75,50" href="green.html" alt="Green circle.">
+                          <area shape=poly coords="325,25,262,125,388,125" href="blue.html" alt="Blue triangle.">
+                          <area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60"
+                                href="yellow.html" alt="Yellow star.">
+                         </map>
+                    </div>
+                </details><!-- / #embedded.section -->
+
+                <!-- #tables -->
+                <details class="section" id="tables">
+                    <summary class="section-hd">Tabular data<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <table>
+                        <caption>A <code>&lt;TABLE/&gt;</code> <code>&lt;CAPTION/&gt;</code> </caption>
+                        <thead>
+                            <tr>
+                                <th><code>&lt;TH/&gt;</code></th>
+                                <th><code>&lt;TH/&gt;</code></th>
+                                <th><code>&lt;TH/&gt;</code></th>
+                                <th><code>&lt;TH/&gt;</code></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;TH/&gt;</code></td>
+                                <td colspan="2"><code>&lt;TH/&gt;</code> (colspan:2)</td>
+                                <td><code>&lt;TH/&gt;</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details><!-- / #tables.section -->
+
+                <!-- #forms -->
+                <details class="section" id="forms">
+                    <summary class="section-hd">Forms<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <form action="." method="GET">
+                        <fieldset>
+                            <legend>Form <code>&lt;LEGEND/&gt;</code></legend>
+                            <label>Input[hidden]:   <input type="hidden" name="input-hidden" value=""></label><br>
+                            <label>Input[text]:     <input type="text" name="input-text" value="" placeholder="Text"></label><br>
+                            <label>Input[search]:   <input type="search" name="input-search" value="" placeholder="Search"></label><br>
+                            <label>Input[tel]:      <input type="tel" name="input-tel" value="" placeholder="0123456789"></label><br>
+                            <label>Input[url]:      <input type="url" name="input-url" value="" placeholder="http://url.com"></label><br>
+                            <label>Input[email]:    <input type="email" name="input-email" value="" placeholder="Email@domain.com"></label><br>
+                            <label>Input[password]: <input type="password" name="input-password" value="password"></label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Date &amp; Time</legend>
+                            <label>Input[datetime]:       <input type="datetime" name="input-datetime" value=""></label><br>
+                            <label>Input[date]:           <input type="date" name="input-date" value=""></label><br>
+                            <label>Input[month]:          <input type="month" name="input-month" value=""></label><br>
+                            <label>Input[week]:           <input type="week" name="input-week" value=""></label><br>
+                            <label>Input[time]:           <input type="time" name="input-time" value=""></label><br>
+                            <label>Input[datetime-local]: <input type="datetime-local" name="input-datetime-local" value=""></label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Other Inputs</legend>
+                            <label>Input[number]:   <input type="number" name="input-number" value=""></label><br>
+                            <label>Input[range]:    <input type="range" name="input-range" value="4" min="0" max="10"></label><br>
+                            <label>Input[color]:    <input type="color" name="input-color" value="#FF0000"></label><br>
+                            <label>Input[checkbox]: <input type="checkbox" name="input-checkbox" value=""></label><br>
+                            <label>Input[radio]:    <input type="radio" name="input-radio" value=""></label><br>
+                            <label>Input[file]:     <input type="file" name="input-file"></label><br>
+                            <label>Input[submit]:   <input type="submit" name="input-submit" value="Submit"></label><br>
+                            <label>Input[image]:    <input type="image" name="input-image" alt="Image Input"></label><br>
+                            <label>Input[reset]:    <input type="reset" name="input-reset" value="Reset"></label><br>
+                            <label>Input[button]:   <input type="button" name="input-button" value="Button"></label><br>
+                            <label>Input[datalist]: <input type="text" name="input-datalist" value="Female" list="sexes"><datalist id="sexes"><option value="Female">Female</option><option value="Male">Male</option></datalist></label><br>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Other controls</legend>
+                            <label>Select:</label> 
+                            <select name="select">
+                                <optgroup label="Optgroup 1">
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </optgroup>
+                                <optgroup label="Optgroup 2">
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    <option value="6">Option 6</option>
+                                </optgroup>
+                            </select>
+                            <br>
+                            <textarea name="textarea" cols="30" rows="4">&lt;TEXTAREA/&gt;</textarea>
+                            <br>
+                            <button>Button</button>
+                            <br>
+                            <code>&lt;KEYGEN/&gt;</code>: <keygen name="keygen">
+                            <br>
+                            <code>&lt;OUTPUT/&gt;</code>: <output for="keygen">[OUTPUT]</output>
+                            <br>
+                            <code>&lt;PROGRESS/&gt;</code>: <progress id="progress" value="40" max=100><span>40</span>%</progress>
+                            <br>
+                            <code>&lt;METER/&gt;</code>: <meter value="2" max="10">2 items used (out of 10 total)</meter>
+                        </fieldset>
+                    </form>
+                </details><!-- / #forms.section -->
+
+                <!-- #interactive -->
+                <details class="section" id="interactive">
+                    <summary class="section-hd">Interactive elements<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html" title="Read the HTML5 Spec">➔</a></summary>
+
+                    <details open>
+                        <summary><code>&lt;SUMMARY/&gt;</code></summary>
+                        <p>The <code>&lt;DETAILS/&gt;</code> element</p>
+                    </details>
+                    
+                    <button value="example" menu="examplemenu">Open Example &lt;MENU/&gt;</button>
+                    <menu id="examplemenu" type="popup">
+                        <menuitem onclick="one()" label="One...">One</menuitem>
+                        <menuitem onclick="two()" label="Two...">Two</menuitem>
+                    </menu>
+                </details><!-- / #interactive.section -->
+
+            </div><!-- / .l-primary -->
+
+        </div><!-- / .grid -->
+
+        <script>
+        var d = document,
+            s = d.querySelectorAll('details'), 
+            t = d.querySelectorAll('.linklist a'),
+            b = d.createElement('BUTTON'),
+            o = 'open',
+            i = s.length,
+            j = t.length;
+
+        function toggleSections(e){ 
+            var b = e.target,
+                i = s.length,
+                t = s[0].hasAttribute(o) ? '' : o;
+            if(t){
+                while(i--){ s[i].setAttribute(o,o); } 
+                b.innerText = b.innerText.replace(/Open/i, 'Close');
+            }else{
+                while(i--){ s[i].removeAttribute(o); } 
+                b.innerText = b.innerText.replace(/Close/i, 'Open');
+            }
+        }
+
+        function toggleSection(e){ 
+            var l = e.target,
+                c = d.querySelector(l.getAttribute('href'));
+            c.hasAttribute(o) ? c.removeAttribute(o) : c.setAttribute(o,o);
+        }
+
+        b.innerText = "Open All Sections";
+        b.style.marginBottom = "1em";
+        b.onclick = toggleSections;
+        s[0].parentNode.insertBefore(b,s[0]);
+
+        while(j--){ t[j].onclick = toggleSection; }
+        </script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

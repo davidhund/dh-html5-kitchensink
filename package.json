@@ -1,0 +1,24 @@
+{
+  "name": "dh-html-kitchensink",
+  "version": "0.1.0",
+  "description": "The simplest list of most (visible) HTML5 elements",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:davidhund/dh-html-kitchensink.git"
+  },
+  "keywords": [
+    "dh-html-kitchensink",
+    "HTML",
+    "HTML5",
+    "Elements"
+  ],
+  "author": "David Hund - davidhund.com",
+  "license": "MIT",
+  "devDependencies": {
+
+  }
+}
