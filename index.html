@@ -378,39 +378,43 @@
         </div><!-- / .grid -->
 
         <script>
-        var d = document,
-            s = d.querySelectorAll('details'), 
-            t = d.querySelectorAll('.linklist a'),
-            b = d.createElement('BUTTON'),
-            o = 'open',
-            i = s.length,
-            j = t.length;
+        if( 'open' in document.createElement('details') ){
 
-        function toggleSections(e){ 
-            var b = e.target,
+            var d = document,
+                s = d.querySelectorAll('details'), 
+                t = d.querySelectorAll('.linklist a'),
+                b = d.createElement('BUTTON'),
+                o = 'open',
                 i = s.length,
-                t = s[0].hasAttribute(o) ? '' : o;
-            if(t){
-                while(i--){ s[i].setAttribute(o,o); } 
-                b.innerText = b.innerText.replace(/Open/i, 'Close');
-            }else{
-                while(i--){ s[i].removeAttribute(o); } 
-                b.innerText = b.innerText.replace(/Close/i, 'Open');
+                j = t.length;
+
+            function toggleSections(e){ 
+                var b = e.target,
+                    i = s.length,
+                    t = s[0].hasAttribute(o) ? '' : o;
+                if(t){
+                    while(i--){ s[i].setAttribute(o,o); } 
+                    b.innerText = b.innerText.replace(/Open/i, 'Close');
+                }else{
+                    while(i--){ s[i].removeAttribute(o); } 
+                    b.innerText = b.innerText.replace(/Close/i, 'Open');
+                }
             }
+
+            function toggleSection(e){ 
+                var l = e.target,
+                    c = d.querySelector(l.getAttribute('href'));
+                c.hasAttribute(o) ? c.removeAttribute(o) : c.setAttribute(o,o);
+            }
+
+            b.type = 'button';
+            b.innerHTML = "Open All Sections";
+            b.style.marginBottom = "1em";
+            b.onclick = toggleSections;
+            s[0].parentNode.insertBefore(b,s[0]);
+
+            while(j--){ t[j].onclick = toggleSection; }
         }
-
-        function toggleSection(e){ 
-            var l = e.target,
-                c = d.querySelector(l.getAttribute('href'));
-            c.hasAttribute(o) ? c.removeAttribute(o) : c.setAttribute(o,o);
-        }
-
-        b.innerText = "Open All Sections";
-        b.style.marginBottom = "1em";
-        b.onclick = toggleSections;
-        s[0].parentNode.insertBefore(b,s[0]);
-
-        while(j--){ t[j].onclick = toggleSection; }
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
